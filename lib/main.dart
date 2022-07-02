@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: HomeScreen.id,
       routes: {
-        HomeScreen.id: (context) => const HomeScreen()
+        HomeScreen.id: (context) => const HomeScreen(),
+        ClaimsScreen.id: (context) => ClaimsScreen(),
       },
     );
   }
