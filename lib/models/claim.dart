@@ -1,7 +1,7 @@
 class Claim {
   Claim({
-    required this.title,
     required this.author,
+    required this.title,
     required this.type,
     required this.channel,
     required this.situation,
