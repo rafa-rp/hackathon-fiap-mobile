@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_fiap_mobile/screens/claims_screen.dart';
+import 'package:hackathon_fiap_mobile/screens/form_screen.dart';
 import 'package:hackathon_fiap_mobile/screens/home_screen.dart';
 import 'package:hackathon_fiap_mobile/screens/login_screen.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         LoginScreen.id: (context) => LoginScreen(),
         HomeScreen.id: (context) => const HomeScreen(),
         ClaimsScreen.id: (context) => ClaimsScreen(),
+        FormScreen.id: (context) => FormScreen()
       },
     );
   }
