@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_fiap_mobile/screens/claims_screen.dart';
 import 'package:hackathon_fiap_mobile/screens/home_screen.dart';
+import 'package:hackathon_fiap_mobile/screens/login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,8 +18,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: HomeScreen.id,
+      initialRoute: LoginScreen.id,
       routes: {
+        LoginScreen.id: (context) => LoginScreen(),
         HomeScreen.id: (context) => const HomeScreen(),
         ClaimsScreen.id: (context) => ClaimsScreen(),
       },

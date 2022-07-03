@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_fiap_mobile/screens/claims_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String id = '/home';
@@ -11,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: InkWell(
           onTap: () {
-
+            Navigator.pushNamed(context, ClaimsScreen.id);
           },
           borderRadius: BorderRadius.circular(16),
           child: Ink(
