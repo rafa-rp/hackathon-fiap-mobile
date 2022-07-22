@@ -83,7 +83,7 @@ class _ClaimsScreenState extends State<ClaimsScreen>{
   }
 
   void fetchClaims() async {
-    final uri = Uri.parse('https://demo7206081.mockable.io/movies');
+    final uri = Uri.parse('https://o5go9f9xcg.execute-api.us-east-1.amazonaws.com/version1/ocorrencias');
     Response response = await Client().get(uri);
 
     final responseJson = jsonDecode(response.body);
@@ -91,17 +91,17 @@ class _ClaimsScreenState extends State<ClaimsScreen>{
     claimsList = responseJson['results']
         .map<Claim>(
           (json) => Claim(
-        title: json['title'],
-        author: json['author'],
-        description: json['description'],
-        image: json['image'],
-        situation: json['situation'],
-        channel: json['channel'],
-        type: json['type']
-      ),
-    )
+              idCognito: json['author'],
+              title: json['title'],
+              image: json['image'],
+              type: json['type'],
+              situation: json['situation'],
+              description: json['description'],
+              channel: json['channel'],
+               data: json['data']
+          ),
+        )
         .toList();
-
     setState(() => {});
   }
 }

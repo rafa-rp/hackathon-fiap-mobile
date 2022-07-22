@@ -1,24 +1,21 @@
 class Claim {
   Claim({
-    required this.author,
+    required this.idCognito,
     required this.title,
     required this.type,
     required this.channel,
     required this.situation,
     required this.image,
-    required this.description
-
-
-
-
+    required this.description,
+    required this.data
   });
 
+  String idCognito;
   String title;
-  String author;
-  String type;
-  String channel;
-  String situation;
   String image;
+  String type;
+  String situation;
   String description;
-
+  String channel;
+  String data;
 }
